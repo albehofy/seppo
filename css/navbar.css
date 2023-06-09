@@ -1,0 +1,144 @@
+/* navbar style */
+.navbar {
+    width: 100%;
+    height: 75px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar .logo img {
+    max-width: 90px;
+    height: auto
+}
+
+.navbar .links {
+    justify-content: space-around;
+    width: 75%;
+    z-index: 999999;
+    /*order:1 , value > 0 - 6*/
+}
+
+.navbar .links a, .navbar .links span {
+    display: block;
+    width: 100%;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+}
+
+.navbar .links a:hover, .navbar .links span:hover,
+.navbar .links .active {
+    color: #47ea4e;
+}
+
+.navbar ul.toggler-icon {
+    height: 30px;
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .toggler-icon li {
+    width: 35px;
+    margin: 3px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 200ms linear;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+}
+
+.navbar .toggler-icon .toggler-icon-center {
+    position: relative;
+    left: 10px;
+    z-index: 9999999;
+    /*order: 1, value: 0-7*/
+}
+
+.navbar ul.toggler-icon:hover li {
+    background-color: #47ea4e;
+}
+
+.navbar ul.toggler-icon .toggler-icon-center.toggler-icon-open {
+    left: -10px;
+}
+
+/* media query */
+@media only screen and (max-width: 1020px) {
+    .navbar .links {
+        display: none;
+        align-items: flex-end;        
+        justify-content: space-around;
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 30%;
+        min-width: 200px;
+        padding: 30px 0 20px 0;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        background-color: #000;
+        transition: all 300ms linear;
+        -webkit-transition: all 300ms linear;
+        -moz-transition: all 300ms linear;
+        -ms-transition: all 300ms linear;
+        -o-transition: all 300ms linear;
+    }
+
+    .navbar .links.links-open {
+        right: 0%;
+        display: flex;
+        border: 1px solid #333;
+    }
+
+    .navbar .links li {
+
+        /* border: 1px solid #333; */
+        width: 70%;
+        min-width: 120px;
+        /* text-align: center; */
+        padding: 4px;
+    }
+
+    .navbar ul.toggler-icon {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+        /* imge in navabr */
+        .navbar .logo img {
+            width: 70px;
+        }    
+}

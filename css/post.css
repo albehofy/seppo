@@ -1,0 +1,165 @@
+/* import fonts */
+@font-face {
+    font-family: Rubik;
+    src: url('./fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+
+/* main style */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    z-index: 99999;
+    padding-bottom: 87px;
+}
+
+/* post section */
+.post {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+
+.post-address {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 115%;
+    margin-bottom: 10px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+    width: 720px;
+    margin: 0 auto 30px;
+    max-width: 95%;
+    color: #000;
+    padding-top: 35px;
+    text-align: center;
+}
+
+.post img {
+    display: block;
+    width: 100%;
+    padding: 35px 0;
+}
+
+.post article  {
+    padding: 21px 0; 
+    width: 100%;
+}
+.article-part-1 {
+    display: flex;
+}
+
+.post article aside {
+    transition: all 300ms ease;
+    position: relative;
+    min-width: 185px;
+    max-height: 210px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid #47ea4e;
+}
+
+.post article aside p {
+    font-size: 15px;
+    padding: 11px 0;
+    line-height: 1.6;
+    letter-spacing: 1.3px;
+}
+
+.post aside p span:nth-of-type(odd){
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.post aside a , .post aside span.article-date-val{
+    font-size: 15px;
+    color: #a5a5a5;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.post aside span.article-date-val {
+    padding: 0 5px;
+}
+
+.post .articel-title {
+    padding: 0 45px;
+}
+
+.post .articel-title p {
+    padding: 10px 0 ;
+    margin-right: 30px;
+    line-height: 1.7;
+    letter-spacing: 130%;
+    font-weight: 300;
+}
+
+.post .articel-title .title-light {
+    color: #a5a5a5;
+}
+
+.post blockquote {
+    padding: 20px 0 0 0;
+}
+.post blockquote img {
+    width: 60px;
+    padding: 21px 0 ;
+}
+
+.post .sub-article-header {
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: 120%;
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 31px;
+}
+@media only screen and (max-width: 1020px) {
+    .post .articel-title p {
+        margin: 0;
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 996px) {
+    .post {
+        width: 97%;
+    }
+    .article-part-1 { 
+        flex-direction: column;
+    }
+
+    .post article aside{   
+        text-align: center;     
+        flex-direction: row;
+        justify-content: space-around;
+        border: initial;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+
+    .post .post-address {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    
+}

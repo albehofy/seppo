@@ -1,0 +1,41 @@
+:root {
+    --baseColor: #e74c3c; 
+    --fontColor: #fff; 
+    --backgroundColor: #000; 
+}
+.container {
+    display: none;
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* top: 0; */
+    bottom: 0;
+    z-index: 9999999999999;
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+    color: var(--baseColor);
+    transition: all 1s ease;
+}
+
+.loader img{
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display:inline-block;
+}
+.loader.remove {
+    /* width: 0; */
+    /* height: 0; */
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+    /* display: none; */
+}
+
+
